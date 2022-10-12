@@ -4,7 +4,7 @@ import Blog from "./Blog/Blog"
 import Chart from "./Chart/Chart"
 import ErrorPage from "./ErrorPage/ErrorPage"
 import Home from "./Home/Home"
-import Option from "./Option/Option"
+
 import Quiz from "./Quiz/Quiz"
 import Root from "./Root/Root"
 import TopicList from "./Topics/TopicList"

@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
-// import { useLoaderData } from 'react-router-dom';
-// import AllQuiz from '../AllQuiz/AllQuiz';
+
 import Topic from '../Topic/Topic';
 
 const TopicList = () => {
-    // const loadData = useLoaderData()
-    // const getTopics = loadData.data
-    // console.log(getTopics)
+    
     const [topic , setTopic] = useState([])
 
     useEffect(() => {

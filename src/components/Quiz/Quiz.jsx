@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { EyeIcon } from '@heroicons/react/24/solid'
 
 const Quiz = ({ ques }) => {
-	console.log(ques.options)
+	// console.log(ques.options)
 	const { question, options, index, correctAnswer, id } = ques;
 
 
@@ -17,12 +17,13 @@ const Quiz = ({ ques }) => {
         
     }
 
-    const handleClickBtn = (id) => {
+    const handleClickBtn = (e) => {
         // console.log(id)
-        const value = id.target.innerText
+        const value = e.target.innerText
         console.log(value)
-        const ans = correctAnswer
-        console.log(ans)
+        // const ans = correctAnswer
+        // console.log(ans)
+        
         if(value === correctAnswer){
             // console.log("ckidddd")
             return toast.success('correct answer',{autoClose : 500})
@@ -49,48 +50,33 @@ const Quiz = ({ ques }) => {
 				<div className="m-6 p-14 grid lg:grid-cols-2 gap-8 sm:grid-cols-1">
                    
 
-					<div className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="checkbox" name="checkbox-1" id="id" />
-						<label onClick={(id)=> handleClickBtn (id)} for="cheese">{options[0]}</label>
+					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
+                        <input type="radio" name="checkbox-1" id="radio-1" />
+						<label  for="cheese">{options[0]}</label>
 						
 					</div>
 
-					<div className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="checkbox" name="checkbox-1" id="id" />
-						<label onClick={(e)=> handleClickBtn(e)} for="cheese">{options[1]}</label>
+					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
+                        <input type="radio" name="checkbox-1" id="radio-2" />
+						<label  for="cheese">{options[1]}</label>
 						
 					</div>
-					<div className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="checkbox" name="checkbox-1" id="id" />
-						<label onClick={(e)=> handleClickBtn (e)} for="cheese">{options[2]}</label>
+					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
+                        <input type="radio" name="checkbox-1" id="radio-3" />
+						<label  for="cheese">{options[2]}</label>
 						
 					</div>
-					<div className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="checkbox" name="checkbox-1" id="id" />
-						<label onClick={(e)=> handleClickBtn (e)} for="cheese">{options[3]}</label>
+					<div onClick={handleClickBtn}  className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
+                        <input type="radio" name="checkbox-1" id="radio-4" />
+						<label  for="cheese">{options[3]}</label>
 						
 					</div>
 				</div>
-{/* 
-				<div className="grid grid-cols-2">
-                <div className="preference bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="checkbox" name="checkbox-1" id="id" />
-						<label onClick={(e)=> handleClickBtn (e)} for="cheese">{options[2]}</label>
-						
-					</div>
 
-					<div className="preference bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="checkbox" name="checkbox-1" id="id" />
-						<label onClick={(e)=> handleClickBtn (e)} for="cheese">{options[3]}</label>
-						
-					</div>
-				</div> */}
+				
 			</div>
                 
-                {/* {
-                    ques.options.map((item)=> <label item={item} ></label>)
-                }
-			 */}
+                
 		</div>
 	);
 };

@@ -11,22 +11,11 @@ const AllQuiz = () => {
 
     
 
-    // const [correctBtn, setCorrectBtn] = useState(false)
-    // // console.log(correctBtn)
-
+    
 
     
 
-    // const handleBtn = (e) =>{
-    //     console.log(e)
-
-    //     //  const right = correctBtn.filter(co => co.id === isCorrect.id )
-    //     //  if(right){
-    //     //     alert('correct')
-    //     //  }
-    //     //  console.log('ckicked')
-    //  }
-
+    
 
     return (
         <div className='lg:w-1/2 sm:w-full mx-auto '>
