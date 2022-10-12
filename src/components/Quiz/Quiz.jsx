@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import { toast } from "react-toastify";
 import { EyeIcon } from '@heroicons/react/24/solid'
 
@@ -15,13 +15,11 @@ const Quiz = ({ ques }) => {
     }
 
     const handleClickBtn = (value) => {
-        // console.log(e)
-        // const value = e.target.value
         console.log(value)
         const ans = correctAnswer
         
         if(value === ans){
-            // console.log("ckidddd")
+            // console.log("ckidddddddddd")
              toast.success('correct answer',{autoClose : 500})
         }
         else{
