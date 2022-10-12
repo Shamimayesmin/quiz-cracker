@@ -15,10 +15,10 @@ const Quiz = ({ ques }) => {
     }
 
     const handleClickBtn = (value) => {
-        console.log(value)
+        // console.log(value)
         const ans = correctAnswer
         
-        if(value === ans){
+        if(value == ans){
             // console.log("ckidddddddddd")
              toast.success('correct answer',{autoClose : 500})
         }
