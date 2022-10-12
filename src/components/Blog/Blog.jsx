@@ -30,24 +30,21 @@ const Blog = () => {
 							</p>
 						</details>
 						<details className="w-full border rounded-lg">
-							<summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">
-								Lorem at arcu rutrum viverra metus sapien venenatis lobortis
-								odio?
+							<summary className="px-4 text-2xl py-6 focus:outline-none focus-visible:ring-violet-400">
+								What is context API and how it works?
 							</summary>
-							<p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-								Tincidunt ut hac condimentum rhoncus phasellus nostra. Magna
-								porttitor egestas tincidunt neque vehicula potenti.{" "}
+							<p className="px-4 text-justify py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
+                            The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on. Context is also touted as an easier, lighter approach to state management using Redux.
+                            <p><strong>How it works?</strong></p>
+                            React.createContext() is all you need. It returns a consumer and a provider. Provider is a component that as it's names suggests provides the state to its children. It will hold the "store" and be the parent of all the components that might need that store. Consumer as it so happens is a component that consumes and uses the state
 							</p>
 						</details>
 						<details className="w-full border rounded-lg">
-							<summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">
-								Eleifend feugiat sollicitudin laoreet adipiscing bibendum
-								suscipit erat?
+							<summary className="px-4 text-2xl py-6 focus:outline-none focus-visible:ring-violet-400">
+								What is useRef hook?
 							</summary>
-							<p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-								Justo libero tellus integer tincidunt justo semper consequat
-								venenatis aliquet imperdiet. Ultricies urna proin fusce nulla
-								pretium sodales vel magna et massa euismod vulputate sed.{" "}
+							<p className="px-4 text-justify py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
+                            Ref means just reference, so it can be a reference to anything (DOM node, Javascript value, etc). The useRef hook returns a mutable object which doesn’t re-render the component when it’s changed. Think it like useState, but unlike useState, doesn’t trigger re-render of the component. The object that useRef returns have a current property that can hold any modifiable value.
 							</p>
 						</details>
 					</div>
