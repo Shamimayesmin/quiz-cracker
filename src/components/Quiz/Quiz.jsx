@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { EyeIcon } from '@heroicons/react/24/solid'
 
@@ -9,75 +9,39 @@ const Quiz = ({ ques }) => {
 
 
     const handleIcon = () =>{
-        // console.log('ckickedd')
-
         if(correctAnswer){
-            return toast.success(correctAnswer,{autoClose:500})
-            
-        }
-        
+            return toast.success(correctAnswer,{autoClose:500})  
+        }  
     }
 
-    const handleClickBtn = (e) => {
-        // console.log(id)
-        const value = e.target.innerText
+    const handleClickBtn = (value) => {
+        // console.log(e)
+        // const value = e.target.value
         console.log(value)
         const ans = correctAnswer
-        // console.log(ans)
         
         if(value === ans){
             // console.log("ckidddd")
-            return toast.success('correct answer',{autoClose : 500})
+             toast.success('correct answer',{autoClose : 500})
         }
         else{
-          return toast.warning('wrong option', {autoClose : 500})
+           toast.warning('wrong option', {autoClose : 500})
         }
     }
 
-	// const loadOption = useLoaderData().data
-	// const getOption = loadOption.questions
-	// // const getQues = getOption.
-	// const option = getOption.options
-	// console.log(getOption)
+	
 	return (
-		<div className=" border">
-			<div className="bg-cyan-100 rounded-md">
-				<div className="">
-					<h1 className="text-2xl mt-4">
-						Quiz{index}:{question}
-					</h1>
-				</div>
-                <button onClick={handleIcon}><EyeIcon  className="h-6 w-6 mx-3"/></button>
-				<div className="m-6 p-14 grid lg:grid-cols-2 gap-8 sm:grid-cols-1">
-                   
+		<div className=" border mt-10 bg-slate-300 rounded-md">
+			
+				 
 
-					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="radio" name="checkbox-1" value="option-0" id="radio-0" />
-						<label  for="option-0">{options[0]}</label>
-						
-					</div>
-
-					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="radio" name="checkbox-1" value="option-1" id="radio-1" />
-						<label  for="option-1">{options[1]}</label>
-						
-					</div>
-					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="radio" name="checkbox-1" value="option-2" id="radio-2" />
-						<label  for="option-2">{options[2]}</label>
-						
-					</div>
-					<div onClick={handleClickBtn}  className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="radio" name="checkbox-1" value="option-3" id="radio-3" />
-						<label  for="option-3">{options[3]}</label>
-						
-					</div>
-				</div>
-
-				
-			</div>
-                
-                
+				<p className="mt-8">{question.slice(3,-4)}</p>
+				<button onClick={handleIcon}><EyeIcon  className="h-6 w-6 mx-3 mt-5"/></button>
+				 <div className="m-6 p-10 bg-slate-200 grid lg:grid-cols-2 gap-8 sm:grid-cols-1">
+				 {
+					options.map((option) =><label key={option.id}  className="preference  mx-auto p-8   w-64 bg-teal-500  py-8 rounded-lg " onClick={() =>handleClickBtn(option)}><input type="radio" value="correctAnswer"  />{option}</label>)
+				 }
+				 </div>
 		</div>
 	);
 };

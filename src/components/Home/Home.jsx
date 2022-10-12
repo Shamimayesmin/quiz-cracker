@@ -17,7 +17,7 @@ const Home = () => {
 						Assessment, instruction, and practice that motivate every student to mastery
 						</p>
 						<div className="flex flex-wrap justify-center">
-							<Link to="/">
+							<Link to="/topics">
 								<button
 									type="button"
 									className="px-8 py-3 m-2 text-lg font-semibold rounded-xl  text-gray-900 hover:bg-red-400 bg-cyan-200"

@@ -7,7 +7,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 	return (
 		<div>
-			<div className="px-4 py-5 bg-slate-200 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8">
+			<div className="px-4 py-5 bg-slate-300 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8">
 				<div className="relative flex items-center justify-between">
 					<Link
 						to="/"
@@ -33,7 +33,7 @@ const Header = () => {
 								to="/home"
 								aria-label="Home"
 								title="Home"
-								className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+								className=" hover:bg-teal-500 rounded-md p-3 font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
 							>
 								Home
 							</Link>
@@ -43,7 +43,7 @@ const Header = () => {
 								to="/topics"
 								aria-label="Topics"
 								title="Topics"
-								className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+								className="hover:bg-teal-500 rounded-md p-3 font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
 							>
 								Topics
 							</Link>
@@ -53,7 +53,7 @@ const Header = () => {
 								to="/blog"
 								aria-label="Blog"
 								title="Blog"
-								className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+								className="p-3 rounded-md font-medium  text-gray-700 transition-colors duration-200  tracking-wide hover:text-deep-purple-accent-400"
 							>
 								<p> Blog</p>
 							</Link>
@@ -63,7 +63,7 @@ const Header = () => {
 								to="/statistics"
 								aria-label="Statistics"
 								title="Statistics"
-								className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+								className="hover:bg-teal-500 rounded-md p-3 font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
 							>
 								Statistics
 							</Link>

@@ -9,19 +9,11 @@ const AllQuiz = () => {
     // console.log(loadQuestion)
 
 
-    
-
-    
-
-    
-
-    
-
     return (
         <div className='lg:w-1/2 sm:w-full mx-auto '>
             
             {
-                loadQuestion.map((ques,index) => <Quiz  key={index+1} ques={ques}></Quiz>)
+                loadQuestion.map((ques) => <Quiz  key={ques.id}  ques={ques}></Quiz>)
             }
             
         </div>

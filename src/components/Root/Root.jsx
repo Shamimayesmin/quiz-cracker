@@ -1,12 +1,10 @@
 // import React, { createContext } from "react";
 import { Outlet, useLoaderData } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
-// export const TopictListContext = createContext([]);
-
 const Root = () => {
-	// const loadOption = useLoaderData();
-	// const option = loadOption.data;
+	
 
 	return (
 		<div>
@@ -17,6 +15,7 @@ const Root = () => {
 			<Header></Header>
 
 			<Outlet></Outlet>
+			<Footer></Footer>
 		</div>
 	);
 };
