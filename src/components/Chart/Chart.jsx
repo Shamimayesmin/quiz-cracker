@@ -22,7 +22,7 @@ const Chart = () => {
     // console.log(newData)
 	
 	return (
-		<div className="mt-8 grid lg-grid-cols-1 sm:grid-cols-1 mx-auto w-96 sm:w-full">
+		<div className="mt-8 grid grid-cols-1 sm:grid-cols-1 mx-auto sm:w-full">
 			{/* <ResponsiveContainer width={300} height= "80%" > */}
 				<LineChart 
 					width={500}

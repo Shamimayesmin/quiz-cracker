@@ -11,9 +11,10 @@ const AllQuiz = () => {
 
     return (
         <div className='lg:w-1/2 sm:w-full mx-auto '>
+            <h1 className='mt-10 font-bold text-3xl text-cyan-600'>JavaScript Quiz Test</h1>
             
             {
-                loadQuestion.map((ques) => <Quiz  key={ques.id}  ques={ques}></Quiz>)
+                loadQuestion.map((ques,index) => <Quiz index={index} key={ques.id}  ques={ques}></Quiz>)
             }
             
         </div>
