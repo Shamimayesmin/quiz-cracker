@@ -1,14 +1,24 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
+// import React, { createContext } from "react";
+import { Outlet, useLoaderData } from "react-router-dom";
+import Header from "../Header/Header";
+
+// export const TopictListContext = createContext([]);
 
 const Root = () => {
-    return (
-        <div>
-            <Header></Header>
-            <Outlet></Outlet>
-        </div>
-    );
+	// const loadOption = useLoaderData();
+	// const option = loadOption.data;
+
+	return (
+		<div>
+			{/* <TopictListContext.Provider value ={option}>
+            
+            </TopictListContext.Provider> */}
+
+			<Header></Header>
+
+			<Outlet></Outlet>
+		</div>
+	);
 };
 
 export default Root;
