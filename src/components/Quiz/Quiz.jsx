@@ -10,6 +10,7 @@ const Quiz = ({ ques }) => {
 
     const handleIcon = () =>{
         // console.log('ckickedd')
+
         if(correctAnswer){
             return toast.success(correctAnswer,{autoClose:500})
             
@@ -21,10 +22,10 @@ const Quiz = ({ ques }) => {
         // console.log(id)
         const value = e.target.innerText
         console.log(value)
-        // const ans = correctAnswer
+        const ans = correctAnswer
         // console.log(ans)
         
-        if(value === correctAnswer){
+        if(value === ans){
             // console.log("ckidddd")
             return toast.success('correct answer',{autoClose : 500})
         }
@@ -51,24 +52,24 @@ const Quiz = ({ ques }) => {
                    
 
 					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="radio" name="checkbox-1" id="radio-1" />
-						<label  for="cheese">{options[0]}</label>
+                        <input type="radio" name="checkbox-1" value="option-0" id="radio-0" />
+						<label  for="option-0">{options[0]}</label>
 						
 					</div>
 
 					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="radio" name="checkbox-1" id="radio-2" />
-						<label  for="cheese">{options[1]}</label>
+                        <input type="radio" name="checkbox-1" value="option-1" id="radio-1" />
+						<label  for="option-1">{options[1]}</label>
 						
 					</div>
 					<div onClick={handleClickBtn} className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="radio" name="checkbox-1" id="radio-3" />
-						<label  for="cheese">{options[2]}</label>
+                        <input type="radio" name="checkbox-1" value="option-2" id="radio-2" />
+						<label  for="option-2">{options[2]}</label>
 						
 					</div>
 					<div onClick={handleClickBtn}  className="preference hover:bg-cyan-600 bg-slate-400 w-64  py-8 rounded-lg ">
-                        <input type="radio" name="checkbox-1" id="radio-4" />
-						<label  for="cheese">{options[3]}</label>
+                        <input type="radio" name="checkbox-1" value="option-3" id="radio-3" />
+						<label  for="option-3">{options[3]}</label>
 						
 					</div>
 				</div>

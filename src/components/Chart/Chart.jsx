@@ -17,40 +17,17 @@ import {
 
 const Chart = () => {
 
-    let loadTopic = useLoaderData().data
-    
-    console.log(loadTopic)
-
-    const data = [
-        {
-            name: "React",
-            total: 8,
-            
-        },
-        {
-            name: "JavaScript",
-            total: 9,
-           
-        },
-        {
-            name: "CSS",
-            total:8,
-           
-        },
-        {
-            name: "Git",
-            total: 11,
-            
-        }
-        
-    ];
+    let loadData = useLoaderData()
+    const newData = loadData.data
+    // console.log(newData)
+	
 	return (
-		<div>
-			{/* <ResponsiveContainer width={300} height= {50%} > */}
+		<div className="mt-8">
+			{/* <ResponsiveContainer width={300} height= "80%" > */}
 				<LineChart 
 					width={500}
 					height={500}
-					data={data}
+					data={newData}
 					margin={{
 						top: 5,
 						right: 30,
@@ -65,7 +42,7 @@ const Chart = () => {
 					<Legend />
 					<Line
 						type="monotone"
-						dataKey="pv"
+						dataKey="uv"
 						stroke="#8884d8"
 						activeDot={{ r: 8 }}
 					/>
