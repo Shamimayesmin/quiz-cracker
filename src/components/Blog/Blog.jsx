@@ -9,17 +9,24 @@ const Blog = () => {
 						Frequently Asked Questions
 					</h2>
 					<p className="mt-4 mb-8 dark:text-gray-400">
-						Sagittis tempor donec id vestibulum viverra. Neque condimentum
-						primis orci at lacus amet bibendum.
+						Question and answer about JavaScript react router ...
 					</p>
 					<div className="space-y-4">
 						<details className="w-full border rounded-lg">
-							<summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">
-								Ex orci laoreet egestas sapien magna egestas scelerisque?
+							<summary className="px-4 text-2xl wrap py-6 focus:outline-none focus-visible:ring-violet-400">
+								What is the purpose of react router?
 							</summary>
-							<p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-								Lectus iaculis orci metus vitae ligula dictum per. Nisl per
-								nullam taciti at adipiscing est.{" "}
+							<p className="px-4 text-justify py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
+								React Router is a standard library for routing in React. It
+								enables the navigation among views of various components in a
+								React Application, allows changing the browser URL, and keeps
+								the UI in sync with the URL.
+                                 <p><strong>Why use React Router? React Router</strong></p>
+                                 React Router,and dynamic, client-side routing, allows us to build a
+								single-page web application with navigation without the page
+								refreshing as the user navigates. React Router uses component
+								structure to call components, which display the appropriate
+								information.
 							</p>
 						</details>
 						<details className="w-full border rounded-lg">
